@@ -18,7 +18,7 @@ else:
         def on_open(ws):
            ws.send("Hello!")
         websocket.enableTrace(True)
-        ws = websocket.WebSocketApp("ws://echo.websocket.org",
+        ws = websocket.WebSocketApp(ABIOS_WS_LINK + sys.argv[1],
                                     on_message=on_message,
                                     on_error=on_error,
                                     on_close=on_close)
